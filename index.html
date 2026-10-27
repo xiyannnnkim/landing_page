@@ -8,10 +8,11 @@
   <meta property="og:title" content="[회신요청] 업무고충토로 및 개선방안추진">
   <meta property="og:description" content="11/11(수) ~ 13(금) 중 석식 · 희망 일정과 식당을 회신해 주세요.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1F2A44">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>
     // 인트로를 이미 봤거나 앵커(#reply 등)로 들어온 경우 결재판을 건너뛴다
@@ -24,7 +25,7 @@
   </script>
 </head>
 <body>
-  <!-- 낙엽 아이콘 -->
+  <!-- 아이콘 -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <symbol id="leaf-maple" viewBox="0 0 24 24">
       <path d="M12 1.5l1.7 3.7 2.7-1.3-.7 4.2 3.5-1.5-1.2 3.3 3.5 1.2-3.8 2.8.9 1.9-4.8-.7-.7 2.6-2.4-2.2V22h-1.4v-6.5l-2.4 2.2-.7-2.6-4.8.7.9-1.9-3.8-2.8 3.5-1.2L4 6.6l3.5 1.5-.7-4.2 2.7 1.3z"/>
@@ -35,6 +36,10 @@
     <symbol id="leaf-oval" viewBox="0 0 24 24">
       <path d="M12 1.8C5.8 6 4.2 12.3 11 19.6l.3 2.6h1.4l.3-2.6C19.8 12.3 18.2 6 12 1.8z"/>
     </symbol>
+    <symbol id="person" viewBox="0 0 48 48">
+      <circle cx="24" cy="17" r="9"/>
+      <path d="M6 46c1.5-10 8.8-15 18-15s16.5 5 18 15z"/>
+    </symbol>
   </svg>
 
   <!-- ================= 결재판 인트로 ================= -->
@@ -42,60 +47,63 @@
     <button class="intro-skip-btn" type="button" data-intro-skip>건너뛰기 <span aria-hidden="true">→</span></button>
 
     <div class="desk-leaves" aria-hidden="true">
-      <svg style="--x:8%;--y:14%;--r:-24deg;--c:#E07A3F;--s:64px"><use href="#leaf-maple"/></svg>
-      <svg style="--x:84%;--y:10%;--r:38deg;--c:#E8B04B;--s:52px"><use href="#leaf-ginkgo"/></svg>
-      <svg style="--x:90%;--y:72%;--r:-60deg;--c:#9C3D2E;--s:58px"><use href="#leaf-maple"/></svg>
-      <svg style="--x:4%;--y:78%;--r:16deg;--c:#E8B04B;--s:44px"><use href="#leaf-oval"/></svg>
-      <svg style="--x:16%;--y:88%;--r:72deg;--c:#C4612A;--s:36px"><use href="#leaf-ginkgo"/></svg>
+      <svg style="--x:7%;--y:12%;--r:-24deg;--c:#E07A3F;--s:60px"><use href="#leaf-maple"/></svg>
+      <svg style="--x:86%;--y:9%;--r:38deg;--c:#E8B04B;--s:48px"><use href="#leaf-ginkgo"/></svg>
+      <svg style="--x:90%;--y:74%;--r:-60deg;--c:#B5402B;--s:54px"><use href="#leaf-maple"/></svg>
+      <svg style="--x:4%;--y:80%;--r:16deg;--c:#E8B04B;--s:40px"><use href="#leaf-ginkgo"/></svg>
     </div>
 
     <div class="intro-stage">
       <div class="folder" id="folder">
         <div class="folder-base">
           <article class="doc" id="doc">
-            <header class="doc-head">
-              <div>
-                <p class="doc-org">유니온머티리얼즈</p>
-                <h2 class="doc-kind" id="intro-title">기 안 용 지</h2>
-              </div>
-              <table class="approval">
-                <caption class="sr-only">결재란</caption>
-                <tr><th scope="col">기안</th><th scope="col">협조</th><th scope="col">결재</th></tr>
-                <tr class="approval-stamps">
-                  <td><span class="stamp" data-stamp>김희연</span></td>
-                  <td><span class="stamp" data-stamp>염설아</span></td>
-                  <td><span class="stamp" data-stamp>최준원</span></td>
-                </tr>
-                <tr class="approval-names"><td>대리 김희연</td><td>사원 염설아</td><td>과장 최준원</td></tr>
-              </table>
-            </header>
+            <p class="gd-slogan">“고충은 나누고, 메뉴는 정하고” 2026 가을 사기진작의 해</p>
+            <h2 class="gd-org" id="intro-title">고충토로추진위원회</h2>
 
-            <dl class="doc-meta">
-              <div><dt>문서번호</dt><dd>고충-2026-1111</dd></div>
-              <div><dt>시행일자</dt><dd>2026. 10. 27.</dd></div>
-              <div><dt>수　　신</dt><dd>수신자 제위</dd></div>
-              <div><dt>제　　목</dt><dd><strong>업무고충토로 및 개선방안추진의 건</strong></dd></div>
+            <dl class="gd-recv">
+              <div><dt>수신</dt><dd>수신자 제위</dd></div>
+              <div><dt>(경유)</dt><dd></dd></div>
+              <div class="gd-title"><dt>제목</dt><dd>업무고충토로 및 개선방안추진 계획 알림</dd></div>
             </dl>
 
-            <ol class="doc-body">
-              <li>바람이 매서워진 것이 꼭 요즘 사무실 분위기 같아 아래와 같이 조촐한 석식 회의(?)를 추진하고자 합니다.</li>
-              <li><b>일시</b> : 2026. 11. 11.(수) ~ 13.(금) 중 택1, 석식</li>
-              <li><b>장소</b> : 소공로 인근 (후보 식당 조사 중)</li>
-              <li><b>준비물</b> : 각자의 고충사항 (다다익선)</li>
-            </ol>
+            <div class="gd-body">
+              <p><span class="gd-n">1.</span>귀 부서의 무궁한 발전과 매서운 바람 속 노고에 깊이 감사드립니다.</p>
+              <p><span class="gd-n">2.</span>최근 사무실 분위기가 계절만큼 쌀쌀해짐에 따라, 아래와 같이 업무고충토로 및 개선방안추진(석식)을 시행하고자 하오니 적극 회신하여 주시기 바랍니다.</p>
+              <ul class="gd-items">
+                <li><span class="gd-k">가. 일　　시</span> : 2026. 11. 11.(수) ~ 11. 13.(금) 중 택1, 석식</li>
+                <li><span class="gd-k">나. 장　　소</span> : 소공로 인근 (후보 식당 조사 중)</li>
+                <li><span class="gd-k">다. 대　　상</span> : 김희연 대리 외 2명</li>
+                <li><span class="gd-k">라. 준 비 물</span> : 각자의 고충사항 (다다익선)</li>
+                <li><span class="gd-k">마. 회신기한</span> : 2026. 11. 4.(수)까지</li>
+              </ul>
+              <p class="gd-attach"><span class="gd-k2">붙임</span><span>1. 후보 식당 목록 1부.<br>2. 회신서 1부.　끝.</span></p>
+            </div>
 
-            <p class="doc-attach">붙임 : 1. 후보 식당 목록 1부.<br><span class="indent">2. 회신서 1부.</span> 끝.</p>
+            <p class="gd-issuer">
+              <span class="gd-issuer-name">고 충 토 로 추 진 위 원 장<span class="seal" id="stamp-big" aria-hidden="true"><i>고충토로</i><i>추진위원</i><i>회장之印</i></span></span>
+            </p>
 
-            <span class="stamp-big" id="stamp-big" aria-hidden="true">승 인</span>
+            <div class="gd-sign">
+              <span class="gd-sign-item"><small>기안자</small> 대리 <b>김희연</b><span class="stamp" data-stamp>김희연</span></span>
+              <span class="gd-sign-item"><small>검토자</small> 사원 <b>염설아</b><span class="stamp" data-stamp>염설아</span></span>
+              <span class="gd-sign-item"><small>결재권자</small> 과장 <b>최준원</b><span class="stamp" data-stamp>최준원</span><em>전결</em></span>
+            </div>
+            <dl class="gd-foot">
+              <div><dt>시행</dt><dd>고충추진-1111 (2026. 10. 27.)</dd><dt>접수</dt><dd>(　　　　)</dd></div>
+              <div><dt>주소</dt><dd>서울특별시 중구 소공로 94 / 산업용품</dd></div>
+              <div><dt>공개구분</dt><dd>부서 내 공개 (고충 내용은 대외비)</dd></div>
+            </dl>
           </article>
         </div>
 
         <button class="folder-cover" id="folder-cover" type="button" aria-label="결재판 열기">
           <span class="cover-front">
-            <span class="cover-clip" aria-hidden="true"></span>
-            <span class="cover-emboss">결&nbsp;&nbsp;재</span>
-            <span class="cover-rule" aria-hidden="true"></span>
-            <span class="cover-brand">UNION MATERIALS</span>
+            <span class="cover-title">
+              <span class="cover-rule" aria-hidden="true"></span>
+              <span class="cover-text">결재를<br>바랍니다</span>
+              <span class="cover-rule" aria-hidden="true"></span>
+            </span>
+            <span class="cover-plate"><span>업무고충토로 및 개선방안추진</span></span>
           </span>
           <span class="cover-back" aria-hidden="true"></span>
         </button>
@@ -110,64 +118,81 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top">
-        <svg aria-hidden="true"><use href="#leaf-maple"/></svg>
-        <span>고충토로 추진위원회</span>
+        <span class="brand-mark" aria-hidden="true"><svg><use href="#leaf-maple"/></svg></span>
+        <span class="brand-name">고충상사</span>
+        <span class="brand-sub">사내 인트라넷</span>
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="#schedule">일정</a>
+        <a href="#people">참석자</a>
         <a href="#restaurants">후보 식당</a>
         <a class="nav-cta" href="#reply">회신하기</a>
       </nav>
+    </div>
+    <div class="ticker" aria-label="사내 속보">
+      <span class="ticker-tag">속보</span>
+      <div class="ticker-track">
+        <p class="ticker-text">
+          <span>11월 11일(수) ~ 13일(금) 중 석식 추진 확정 🍁</span>
+          <span>회신 마감 11월 4일(수), 미회신 시 "어디든 좋아요"로 간주(?)</span>
+          <span>최준원 과장, "고충사항 다수 준비 중" 발언</span>
+          <span>염설아 사원, 수목금으로 일정 콕 집어내 화제</span>
+          <span>후보 식당 현재 조사 중… 재촉 금지</span>
+        </p>
+        <p class="ticker-text" aria-hidden="true">
+          <span>11월 11일(수) ~ 13일(금) 중 석식 추진 확정 🍁</span>
+          <span>회신 마감 11월 4일(수), 미회신 시 "어디든 좋아요"로 간주(?)</span>
+          <span>최준원 과장, "고충사항 다수 준비 중" 발언</span>
+          <span>염설아 사원, 수목금으로 일정 콕 집어내 화제</span>
+          <span>후보 식당 현재 조사 중… 재촉 금지</span>
+        </p>
+      </div>
     </div>
   </header>
 
   <main id="top" tabindex="-1">
     <!-- Hero -->
     <section class="hero" id="schedule" aria-labelledby="hero-title">
+      <div class="hero-blinds" aria-hidden="true"></div>
       <div class="hero-leaves" aria-hidden="true"></div>
-      <div class="leaf-corner leaf-corner--tl" aria-hidden="true">
-        <svg style="--r:-20deg;--c:#E8B04B"><use href="#leaf-maple"/></svg>
-        <svg style="--r:30deg;--c:#E07A3F"><use href="#leaf-oval"/></svg>
-        <svg style="--r:-70deg;--c:#9C3D2E"><use href="#leaf-ginkgo"/></svg>
-      </div>
-      <div class="leaf-corner leaf-corner--br" aria-hidden="true">
-        <svg style="--r:160deg;--c:#E07A3F"><use href="#leaf-maple"/></svg>
-        <svg style="--r:200deg;--c:#E8B04B"><use href="#leaf-ginkgo"/></svg>
-        <svg style="--r:120deg;--c:#C4612A"><use href="#leaf-oval"/></svg>
-      </div>
 
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="doc-tag">[회신요청]</p>
-          <h1 id="hero-title">업무<mark>고충</mark>토로 및<br>개선방안추진</h1>
-          <p class="hero-quote">“바람이 매서워진 것이 꼭 요즘<br>사무실 분위기 같아서”</p>
-          <p class="hero-lead">조촐하게 모여 그간의 고충을 털어놓고,<br>개선방안(이라 쓰고 저녁 메뉴라 읽는다)을 추진하고자 합니다.</p>
+          <p class="cap-tag">[회신요청]</p>
+          <h1 id="hero-title" class="hero-title">
+            <span>업무고충토로</span>
+            <span><small>및</small> 개선방안추진</span>
+          </h1>
+          <p class="cap-box">바람이 매서워진 것이 꼭<br>요즘 사무실 분위기 같아서</p>
+          <p class="cap-sub">(조촐하게 모여볼까 생각이 드는 나날)</p>
 
           <div class="captions" aria-label="예능 자막">
-            <span class="caption">같이 <em>셋이</em><br>뭉치자고</span>
-            <span class="caption caption--alt">바쁜 건<br><em>내가</em> 바빠</span>
+            <span class="burst">같이 <em>셋이</em><br>뭉치자고</span>
+            <span class="burst burst--alt">바쁜 건<br><em>내가</em> 바빠</span>
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#reply">희망 일정 회신하기 <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-ghost" href="#restaurants">후보 식당 보기</a>
+            <a class="btn btn-yellow" href="#reply">희망 일정 회신하기 <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-line" href="#restaurants">후보 식당 보기</a>
           </div>
         </div>
 
-        <aside class="hero-card" aria-label="모임 개요">
+        <aside class="notice-card" aria-label="모임 개요">
+          <span class="tape" aria-hidden="true"></span>
+          <p class="notice-head">사 내 공 지</p>
           <div class="dday">
-            <span class="dday-label">모임 후보 첫날까지</span>
+            <span class="dday-label">후보 첫날까지</span>
             <strong class="dday-value" id="dday">D-?</strong>
           </div>
           <dl class="facts">
-            <div><dt>일시</dt><dd>2026. 11. 11(수) ~ 13(금) 중 하루</dd></div>
+            <div><dt>일시</dt><dd>11. 11(수) ~ 13(금) 중 하루</dd></div>
             <div><dt>시간</dt><dd>석식</dd></div>
             <div><dt>장소</dt><dd>소공로 인근 <span class="muted">(조사 중)</span></dd></div>
-            <div><dt>인원</dt><dd>3인</dd></div>
-            <div><dt>회신 마감</dt><dd><strong>11. 4.(수)</strong></dd></div>
+            <div><dt>인원</dt><dd>3명</dd></div>
+            <div><dt>회신 마감</dt><dd><mark>11. 4.(수)</mark></dd></div>
           </dl>
           <div class="calendar-wrap">
-            <p class="calendar-title">2026년 11월</p>
+            <p class="calendar-title">2026. 11.</p>
             <div class="calendar" id="calendar" role="img"
                  aria-label="2026년 11월 달력. 11일부터 13일까지 후보일, 4일부터 6일과 18일은 불가, 16일 주간은 최준원 과장 출장 잠정."></div>
             <ul class="calendar-legend">
@@ -181,64 +206,70 @@
     </section>
 
     <!-- 참석자 -->
-    <section class="section section-attendees" aria-labelledby="attendees-title">
+    <section class="section section-people" id="people" aria-labelledby="people-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">수신자 제위</p>
-          <h2 id="attendees-title">참석 대상</h2>
+          <h2 id="people-title"><span class="hl">참석 대상</span></h2>
+          <p class="section-cap">※ 사원증 지참 필수 (아님)</p>
         </header>
-        <ul class="attendees">
-          <li class="attendee">
-            <span class="avatar" aria-hidden="true">희연</span>
-            <div>
-              <p class="attendee-name">김희연 <span>대리</span></p>
-              <p class="attendee-team">산업용품</p>
-              <p class="attendee-note">기안자. 바람이 매서워 모임을 소집함</p>
-            </div>
+        <ul class="badges">
+          <li class="badge-card">
+            <span class="badge-hole" aria-hidden="true"></span>
+            <p class="badge-co">고충상사 <small>EMPLOYEE ID</small></p>
+            <div class="badge-photo" aria-hidden="true"><svg><use href="#person"/></svg></div>
+            <p class="badge-name">김희연</p>
+            <p class="badge-rank">대리</p>
+            <p class="badge-dept">산업용품</p>
+            <p class="badge-bar" aria-hidden="true"></p>
+            <span class="sticker">기안자</span>
+            <p class="badge-note">바람이 매서워 모임을 소집함</p>
           </li>
-          <li class="attendee">
-            <span class="avatar avatar--b" aria-hidden="true">설아</span>
-            <div>
-              <p class="attendee-name">염설아 <span>사원</span></p>
-              <p class="attendee-team">Cutting Tool Sales &amp; Marketing</p>
-              <p class="attendee-note">일정 조율 담당. 수목금을 콕 집어냄</p>
-            </div>
+          <li class="badge-card">
+            <span class="badge-hole" aria-hidden="true"></span>
+            <p class="badge-co">고충상사 <small>EMPLOYEE ID</small></p>
+            <div class="badge-photo" aria-hidden="true"><svg><use href="#person"/></svg></div>
+            <p class="badge-name">염설아</p>
+            <p class="badge-rank">사원</p>
+            <p class="badge-dept">Cutting Tool Sales &amp; Marketing</p>
+            <p class="badge-bar" aria-hidden="true"></p>
+            <span class="sticker sticker--blue">일정 장인</span>
+            <p class="badge-note">수목금을 콕 집어낸 장본인</p>
           </li>
-          <li class="attendee">
-            <span class="avatar avatar--c" aria-hidden="true">준원</span>
-            <div>
-              <p class="attendee-name">최준원 <span>과장</span></p>
-              <p class="attendee-team">절삭공구영업팀</p>
-              <p class="attendee-note">고충사항 다수 준비 중. 16일 주간 출장(잠정)</p>
-            </div>
+          <li class="badge-card">
+            <span class="badge-hole" aria-hidden="true"></span>
+            <p class="badge-co">고충상사 <small>EMPLOYEE ID</small></p>
+            <div class="badge-photo" aria-hidden="true"><svg><use href="#person"/></svg></div>
+            <p class="badge-name">최준원</p>
+            <p class="badge-rank">과장</p>
+            <p class="badge-dept">절삭공구영업팀</p>
+            <p class="badge-bar" aria-hidden="true"></p>
+            <span class="sticker sticker--red">고충 수집가</span>
+            <p class="badge-note">고충사항 다수 준비 중 · 16일 주간 출장(잠정)</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <div class="divider" aria-hidden="true"><svg><use href="#leaf-maple"/></svg></div>
-
     <!-- 후보 식당 -->
-    <section class="section" id="restaurants" aria-labelledby="restaurants-title">
+    <section class="section section-food" id="restaurants" aria-labelledby="restaurants-title">
       <div class="container">
         <header class="section-head">
           <p class="eyebrow">붙임 1</p>
-          <h2 id="restaurants-title">후보 식당</h2>
-          <p>회사(서울 중구 소공로 94)에서 걸어서 10~15분 이내,<br>셋이 조용히 고충을 나눌 수 있는 곳으로 고르고 있습니다.</p>
+          <h2 id="restaurants-title"><span class="hl">후보 식당 목록</span></h2>
+          <p>회사(서울 중구 소공로 94)에서 걸어서 10~15분 이내,<br>셋이 조용히 고충을 나눌 수 있는 곳으로 검토하고 있습니다.</p>
+          <p class="section-cap">※ 현재 조사 중. 재촉하면 늦어짐</p>
         </header>
-        <p class="notice"><span aria-hidden="true">🍂</span> 현재 후보 식당을 조사 중입니다. 추가되는 대로 업데이트됩니다.</p>
         <div class="restaurant-grid" id="restaurant-grid"></div>
       </div>
     </section>
 
-    <div class="divider" aria-hidden="true"><svg><use href="#leaf-ginkgo"/></svg></div>
-
     <!-- 회신서 -->
     <section class="section section-reply" id="reply" aria-labelledby="reply-title">
       <div class="container narrow">
-        <header class="section-head">
-          <p class="eyebrow">붙임 2</p>
-          <h2 id="reply-title">회신서</h2>
+        <header class="section-head section-head--dark">
+          <p class="eyebrow eyebrow--yellow">붙임 2</p>
+          <h2 id="reply-title">회신서 작성</h2>
           <p>회신 마감 <strong>2026. 11. 4.(수)</strong> · 제출하시면 기안자에게 메일로 접수됩니다.</p>
         </header>
 
@@ -246,67 +277,87 @@
           <input type="hidden" name="access_key" value="044c6660-ad77-49aa-a8b9-b576c5645cc1">
           <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-          <fieldset class="field" data-field="name">
-            <legend><span class="num">1</span>성함</legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="name" value="김희연 대리"><span>김희연 대리</span></label>
-              <label class="chip"><input type="radio" name="name" value="염설아 사원"><span>염설아 사원</span></label>
-              <label class="chip"><input type="radio" name="name" value="최준원 과장"><span>최준원 과장</span></label>
-              <label class="chip"><input type="radio" name="name" value="__other"><span>기타</span></label>
-            </div>
-            <div class="other-input" data-other-for="name" hidden>
-              <label class="sr-only" for="name-other">성함 직접 입력</label>
-              <input type="text" id="name-other" name="name_other" maxlength="30" placeholder="성함과 직급을 입력해 주세요">
-            </div>
-            <p class="field-error" id="err-name" hidden></p>
-          </fieldset>
-
-          <fieldset class="field" data-field="dates">
-            <legend><span class="num">2</span>가능한 날짜 <span class="legend-hint">(모두 선택)</span></legend>
-            <div class="chips">
-              <label class="chip"><input type="checkbox" name="dates" value="11/11(수)"><span>11/11 <small>수</small></span></label>
-              <label class="chip"><input type="checkbox" name="dates" value="11/12(목)"><span>11/12 <small>목</small></span></label>
-              <label class="chip"><input type="checkbox" name="dates" value="11/13(금)"><span>11/13 <small>금</small></span></label>
-              <button type="button" class="chip-btn" id="all-dates">모두 가능</button>
-            </div>
-            <p class="field-error" id="err-dates" hidden></p>
-          </fieldset>
-
-          <fieldset class="field" data-field="best">
-            <legend><span class="num">3</span>가장 희망하는 날짜 <span class="legend-hint">(선택)</span></legend>
-            <div class="chips">
-              <label class="chip"><input type="radio" name="best_date" value="상관없음" checked><span>상관없음</span></label>
-              <label class="chip"><input type="radio" name="best_date" value="11/11(수)" disabled><span>11/11 <small>수</small></span></label>
-              <label class="chip"><input type="radio" name="best_date" value="11/12(목)" disabled><span>11/12 <small>목</small></span></label>
-              <label class="chip"><input type="radio" name="best_date" value="11/13(금)" disabled><span>11/13 <small>금</small></span></label>
-            </div>
-            <p class="field-help">2번에서 고른 날짜 중에서 선택할 수 있습니다.</p>
-          </fieldset>
-
-          <fieldset class="field" data-field="restaurant">
-            <legend><span class="num">4</span>희망 식당</legend>
-            <div class="chips" id="restaurant-options"></div>
-            <div class="other-input" data-other-for="restaurant" hidden>
-              <label class="sr-only" for="restaurant-other">추천 식당 직접 입력</label>
-              <input type="text" id="restaurant-other" name="restaurant_other" maxlength="60" placeholder="추천하고 싶은 식당 이름이나 메뉴">
-            </div>
-            <p class="field-error" id="err-restaurant" hidden></p>
-          </fieldset>
-
-          <div class="field">
-            <label class="field-label" for="grievance"><span class="num">5</span>미리 보는 고충 한 줄 <span class="legend-hint">(선택)</span></label>
-            <textarea id="grievance" name="grievance" rows="2" maxlength="200" placeholder="예) 메일함은 열었다 닫았다 하는데 일은 줄지 않습니다"></textarea>
+          <div class="form-head">
+            <span class="form-no">[서식 제2호]</span>
+            <p class="form-title">회　신　서</p>
+            <span class="form-no form-no--r">고충추진-1111 관련</span>
           </div>
 
-          <div class="field">
-            <label class="field-label" for="message"><span class="num">6</span>하고 싶은 말 <span class="legend-hint">(선택)</span></label>
-            <textarea id="message" name="message" rows="3" maxlength="500" placeholder="못 먹는 음식, 늦게 합류 등 참고할 내용"></textarea>
+          <fieldset class="row" data-field="name">
+            <legend class="row-label">성　　명</legend>
+            <div class="row-body">
+              <div class="chips">
+                <label class="chip"><input type="radio" name="name" value="김희연 대리"><span>김희연 대리</span></label>
+                <label class="chip"><input type="radio" name="name" value="염설아 사원"><span>염설아 사원</span></label>
+                <label class="chip"><input type="radio" name="name" value="최준원 과장"><span>최준원 과장</span></label>
+                <label class="chip"><input type="radio" name="name" value="__other"><span>기타</span></label>
+              </div>
+              <div class="other-input" data-other-for="name" hidden>
+                <label class="sr-only" for="name-other">성함 직접 입력</label>
+                <input type="text" id="name-other" name="name_other" maxlength="30" placeholder="성함과 직급을 입력해 주세요">
+              </div>
+              <p class="field-error" id="err-name" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="row" data-field="dates">
+            <legend class="row-label">가능 일자<small>(모두 선택)</small></legend>
+            <div class="row-body">
+              <div class="chips">
+                <label class="chip"><input type="checkbox" name="dates" value="11/11(수)"><span>11/11 (수)</span></label>
+                <label class="chip"><input type="checkbox" name="dates" value="11/12(목)"><span>11/12 (목)</span></label>
+                <label class="chip"><input type="checkbox" name="dates" value="11/13(금)"><span>11/13 (금)</span></label>
+                <button type="button" class="chip-btn" id="all-dates">모두 가능</button>
+              </div>
+              <p class="field-error" id="err-dates" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="row" data-field="best">
+            <legend class="row-label">최우선 일자<small>(선택)</small></legend>
+            <div class="row-body">
+              <div class="chips">
+                <label class="chip"><input type="radio" name="best_date" value="상관없음" checked><span>상관없음</span></label>
+                <label class="chip"><input type="radio" name="best_date" value="11/11(수)" disabled><span>11/11 (수)</span></label>
+                <label class="chip"><input type="radio" name="best_date" value="11/12(목)" disabled><span>11/12 (목)</span></label>
+                <label class="chip"><input type="radio" name="best_date" value="11/13(금)" disabled><span>11/13 (금)</span></label>
+              </div>
+              <p class="field-help">가능 일자에서 고른 날짜 중에서 선택할 수 있습니다.</p>
+            </div>
+          </fieldset>
+
+          <fieldset class="row" data-field="restaurant">
+            <legend class="row-label">희망 식당</legend>
+            <div class="row-body">
+              <div class="chips" id="restaurant-options"></div>
+              <div class="other-input" data-other-for="restaurant" hidden>
+                <label class="sr-only" for="restaurant-other">추천 식당 직접 입력</label>
+                <input type="text" id="restaurant-other" name="restaurant_other" maxlength="60" placeholder="추천하고 싶은 식당 이름이나 메뉴">
+              </div>
+              <p class="field-error" id="err-restaurant" hidden></p>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <label class="row-label" for="grievance">고충 예고<small>(선택)</small></label>
+            <div class="row-body">
+              <textarea id="grievance" name="grievance" rows="2" maxlength="200" placeholder="예) 메일함은 열었다 닫았다 하는데 일은 줄지 않습니다"></textarea>
+            </div>
           </div>
+
+          <div class="row">
+            <label class="row-label" for="message">비　　고<small>(선택)</small></label>
+            <div class="row-body">
+              <textarea id="message" name="message" rows="3" maxlength="500" placeholder="못 먹는 음식, 늦게 합류 등 참고할 내용"></textarea>
+            </div>
+          </div>
+
+          <p class="form-pledge">위와 같이 회신합니다.</p>
 
           <div class="form-foot">
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
-              <span class="btn-label">회신 제출 (결재 올리기)</span>
+            <button type="submit" class="btn btn-yellow btn-submit" id="submit-btn">
+              <span class="btn-label">결재 상신</span>
             </button>
           </div>
         </form>
@@ -314,9 +365,10 @@
         <div class="reply-done" id="reply-done" tabindex="-1" hidden>
           <span class="done-stamp" aria-hidden="true">접 수</span>
           <h3>회신 감사드립니다 <span aria-hidden="true">🍁</span></h3>
+          <p class="cap-sub cap-sub--dark">(뿌듯)</p>
           <dl class="done-summary" id="done-summary"></dl>
           <p class="done-sign" id="done-sign"></p>
-          <button type="button" class="btn btn-ghost" id="reply-again">다시 작성하기</button>
+          <button type="button" class="btn btn-line btn-line--dark" id="reply-again">다시 작성하기</button>
         </div>
       </div>
     </section>
@@ -324,8 +376,9 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>기안 : 산업용품 김희연 대리 · 회신 마감 2026. 11. 4.(수)</p>
+      <p><b>고충상사</b> 고충토로추진위원회 · 기안 : 산업용품 김희연 대리</p>
       <p class="muted">“흔들리는 것은 바람도 아니고 깃발도 아니며, 그대들의 마음이다”</p>
+      <p class="muted small">본 페이지는 사내 친목용이며 실제 결재와는 무관합니다.</p>
     </div>
   </footer>
 

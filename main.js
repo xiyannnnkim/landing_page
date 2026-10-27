@@ -171,13 +171,13 @@
 
   function cardHtml(r) {
     const pending = r.status !== 'ready';
-    const tbd = '<span class="tbd">조사 중</span>';
+    const tbd = '<span class="tbd">조사 중…</span>';
     const location = r.address
       ? `${esc(r.address)}${r.walkMinutes ? ` <span class="walk">· 도보 약 ${esc(r.walkMinutes)}분</span>` : ''}`
       : tbd;
     const menus = r.menus && r.menus.length
       ? `<ul class="r-menu">${r.menus.map((m) => `<li><span>${esc(m.name)}</span>${m.price ? `<span class="price">${esc(m.price)}</span>` : ''}</li>`).join('')}</ul>`
-      : `<p>${tbd}</p>`;
+      : tbd;
     const hasMap = /^https:\/\//.test(r.naverUrl || '');
     const mapUrl = hasMap
       ? r.naverUrl
@@ -185,24 +185,22 @@
     const mapLabel = hasMap ? '네이버 지도에서 보기' : `근처 ${r.category || '맛집'} 둘러보기`;
     const photo = r.photo
       ? `<img src="${esc(r.photo)}" alt="${esc(r.name)} 대표 사진" loading="lazy">`
-      : '<svg class="r-photo-leaf" viewBox="0 0 24 24" aria-hidden="true"><use href="#leaf-maple"/></svg>';
+      : '<svg class="r-photo-leaf" viewBox="0 0 24 24" aria-hidden="true"><use href="#leaf-maple"/></svg><span class="r-photo-text">사진 준비 중</span>';
 
     return `
       <article class="r-card${pending ? ' is-pending' : ''}">
-        <div class="r-photo">
-          ${photo}
-          ${r.category ? `<span class="chip-cat">${esc(r.category)}</span>` : ''}
-          ${pending ? '<span class="chip-status">조사 중</span>' : ''}
-        </div>
-        <div class="r-body">
+        <span class="r-tab">${esc(r.category || '기타')}</span>
+        <div class="r-sheet">
+          ${pending ? '<span class="r-stamp">검토중</span>' : ''}
+          <div class="r-photo">${photo}</div>
           <h3 class="r-name">${esc(r.name)}</h3>
           ${r.description ? `<p class="r-desc">${esc(r.description)}</p>` : ''}
           <dl class="r-info">
             <div><dt>위치</dt><dd>${location}</dd></div>
             <div><dt>영업시간</dt><dd>${r.hours ? esc(r.hours) : tbd}</dd></div>
+            <div><dt>대표메뉴</dt><dd>${menus}</dd></div>
             ${r.note ? `<div><dt>참고</dt><dd>${esc(r.note)}</dd></div>` : ''}
           </dl>
-          <div class="r-menu-wrap"><h4>대표 메뉴</h4>${menus}</div>
           <a class="btn btn-map" href="${esc(mapUrl)}" target="_blank" rel="noopener">
             ${esc(mapLabel)} <span aria-hidden="true">↗</span><span class="sr-only">(새 창)</span>
           </a>
