@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>업무고충토로 및 개선방안추진</title>
+  <meta name="description" content="2026. 11. 11(수) ~ 13(금) 중 석식 — 희망 일정과 식당을 회신해 주세요.">
+  <meta property="og:title" content="[회신요청] 업무고충토로 및 개선방안추진">
+  <meta property="og:description" content="11/11(수) ~ 13(금) 중 석식 · 희망 일정과 식당을 회신해 주세요.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // 인트로를 이미 봤거나 앵커(#reply 등)로 들어온 경우 결재판을 건너뛴다
+    (function () {
+      var d = document.documentElement, seen = false;
+      d.classList.add('js');
+      try { seen = sessionStorage.getItem('autumn-meetup:intro-seen') === '1'; } catch (e) {}
+      if (seen || location.hash) d.classList.add('intro-skip');
+    })();
+  </script>
+</head>
+<body>
+  <!-- 낙엽 아이콘 -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="leaf-maple" viewBox="0 0 24 24">
+      <path d="M12 1.5l1.7 3.7 2.7-1.3-.7 4.2 3.5-1.5-1.2 3.3 3.5 1.2-3.8 2.8.9 1.9-4.8-.7-.7 2.6-2.4-2.2V22h-1.4v-6.5l-2.4 2.2-.7-2.6-4.8.7.9-1.9-3.8-2.8 3.5-1.2L4 6.6l3.5 1.5-.7-4.2 2.7 1.3z"/>
+    </symbol>
+    <symbol id="leaf-ginkgo" viewBox="0 0 24 24">
+      <path d="M11.3 14.2C6.6 13.8 2.5 10.4 2.5 4.8c3.1 1.6 6.1 1.1 8.3-.9l1.2 2 1.2-2c2.2 2 5.2 2.5 8.3.9 0 5.6-4.1 9-8.8 9.4V22h-1.4z"/>
+    </symbol>
+    <symbol id="leaf-oval" viewBox="0 0 24 24">
+      <path d="M12 1.8C5.8 6 4.2 12.3 11 19.6l.3 2.6h1.4l.3-2.6C19.8 12.3 18.2 6 12 1.8z"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= 결재판 인트로 ================= -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <button class="intro-skip-btn" type="button" data-intro-skip>건너뛰기 <span aria-hidden="true">→</span></button>
+
+    <div class="desk-leaves" aria-hidden="true">
+      <svg style="--x:8%;--y:14%;--r:-24deg;--c:#E07A3F;--s:64px"><use href="#leaf-maple"/></svg>
+      <svg style="--x:84%;--y:10%;--r:38deg;--c:#E8B04B;--s:52px"><use href="#leaf-ginkgo"/></svg>
+      <svg style="--x:90%;--y:72%;--r:-60deg;--c:#9C3D2E;--s:58px"><use href="#leaf-maple"/></svg>
+      <svg style="--x:4%;--y:78%;--r:16deg;--c:#E8B04B;--s:44px"><use href="#leaf-oval"/></svg>
+      <svg style="--x:16%;--y:88%;--r:72deg;--c:#C4612A;--s:36px"><use href="#leaf-ginkgo"/></svg>
+    </div>
+
+    <div class="intro-stage">
+      <div class="folder" id="folder">
+        <div class="folder-base">
+          <article class="doc" id="doc">
+            <header class="doc-head">
+              <div>
+                <p class="doc-org">유니온머티리얼즈</p>
+                <h2 class="doc-kind" id="intro-title">기 안 용 지</h2>
+              </div>
+              <table class="approval">
+                <caption class="sr-only">결재란</caption>
+                <tr><th scope="col">기안</th><th scope="col">협조</th><th scope="col">결재</th></tr>
+                <tr class="approval-stamps">
+                  <td><span class="stamp" data-stamp>김희연</span></td>
+                  <td><span class="stamp" data-stamp>염설아</span></td>
+                  <td><span class="stamp" data-stamp>최준원</span></td>
+                </tr>
+                <tr class="approval-names"><td>대리 김희연</td><td>사원 염설아</td><td>과장 최준원</td></tr>
+              </table>
+            </header>
+
+            <dl class="doc-meta">
+              <div><dt>문서번호</dt><dd>고충-2026-1111</dd></div>
+              <div><dt>시행일자</dt><dd>2026. 10. 27.</dd></div>
+              <div><dt>수　　신</dt><dd>수신자 제위</dd></div>
+              <div><dt>제　　목</dt><dd><strong>업무고충토로 및 개선방안추진의 건</strong></dd></div>
+            </dl>
+
+            <ol class="doc-body">
+              <li>바람이 매서워진 것이 꼭 요즘 사무실 분위기 같아 아래와 같이 조촐한 석식 회의(?)를 추진하고자 합니다.</li>
+              <li><b>일시</b> : 2026. 11. 11.(수) ~ 13.(금) 중 택1, 석식</li>
+              <li><b>장소</b> : 소공로 인근 (후보 식당 조사 중)</li>
+              <li><b>준비물</b> : 각자의 고충사항 (다다익선)</li>
+            </ol>
+
+            <p class="doc-attach">붙임 : 1. 후보 식당 목록 1부.<br><span class="indent">2. 회신서 1부.</span> 끝.</p>
+
+            <span class="stamp-big" id="stamp-big" aria-hidden="true">승 인</span>
+          </article>
+        </div>
+
+        <button class="folder-cover" id="folder-cover" type="button" aria-label="결재판 열기">
+          <span class="cover-front">
+            <span class="cover-clip" aria-hidden="true"></span>
+            <span class="cover-emboss">결&nbsp;&nbsp;재</span>
+            <span class="cover-rule" aria-hidden="true"></span>
+            <span class="cover-brand">UNION MATERIALS</span>
+          </span>
+          <span class="cover-back" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <p class="intro-hint">클릭하여 결재판 열기</p>
+    <button class="intro-enter" id="intro-enter" type="button">열람하기 <span aria-hidden="true">→</span></button>
+  </div>
+
+  <!-- ================= 본문 ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <svg aria-hidden="true"><use href="#leaf-maple"/></svg>
+        <span>고충토로 추진위원회</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#schedule">일정</a>
+        <a href="#restaurants">후보 식당</a>
+        <a class="nav-cta" href="#reply">회신하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero" id="schedule" aria-labelledby="hero-title">
+      <div class="hero-leaves" aria-hidden="true"></div>
+      <div class="leaf-corner leaf-corner--tl" aria-hidden="true">
+        <svg style="--r:-20deg;--c:#E8B04B"><use href="#leaf-maple"/></svg>
+        <svg style="--r:30deg;--c:#E07A3F"><use href="#leaf-oval"/></svg>
+        <svg style="--r:-70deg;--c:#9C3D2E"><use href="#leaf-ginkgo"/></svg>
+      </div>
+      <div class="leaf-corner leaf-corner--br" aria-hidden="true">
+        <svg style="--r:160deg;--c:#E07A3F"><use href="#leaf-maple"/></svg>
+        <svg style="--r:200deg;--c:#E8B04B"><use href="#leaf-ginkgo"/></svg>
+        <svg style="--r:120deg;--c:#C4612A"><use href="#leaf-oval"/></svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="doc-tag">[회신요청]</p>
+          <h1 id="hero-title">업무<mark>고충</mark>토로 및<br>개선방안추진</h1>
+          <p class="hero-quote">“바람이 매서워진 것이 꼭 요즘<br>사무실 분위기 같아서”</p>
+          <p class="hero-lead">조촐하게 모여 그간의 고충을 털어놓고,<br>개선방안(이라 쓰고 저녁 메뉴라 읽는다)을 추진하고자 합니다.</p>
+
+          <div class="captions" aria-label="예능 자막">
+            <span class="caption">같이 <em>셋이</em><br>뭉치자고</span>
+            <span class="caption caption--alt">바쁜 건<br><em>내가</em> 바빠</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#reply">희망 일정 회신하기 <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-ghost" href="#restaurants">후보 식당 보기</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="모임 개요">
+          <div class="dday">
+            <span class="dday-label">모임 후보 첫날까지</span>
+            <strong class="dday-value" id="dday">D-?</strong>
+          </div>
+          <dl class="facts">
+            <div><dt>일시</dt><dd>2026. 11. 11(수) ~ 13(금) 중 하루</dd></div>
+            <div><dt>시간</dt><dd>석식</dd></div>
+            <div><dt>장소</dt><dd>소공로 인근 <span class="muted">(조사 중)</span></dd></div>
+            <div><dt>인원</dt><dd>3인</dd></div>
+            <div><dt>회신 마감</dt><dd><strong>11. 4.(수)</strong></dd></div>
+          </dl>
+          <div class="calendar-wrap">
+            <p class="calendar-title">2026년 11월</p>
+            <div class="calendar" id="calendar" role="img"
+                 aria-label="2026년 11월 달력. 11일부터 13일까지 후보일, 4일부터 6일과 18일은 불가, 16일 주간은 최준원 과장 출장 잠정."></div>
+            <ul class="calendar-legend">
+              <li><i class="lg lg-candidate"></i>후보일</li>
+              <li><i class="lg lg-blocked"></i>불가</li>
+              <li><i class="lg lg-trip"></i>출장(잠정)</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 참석자 -->
+    <section class="section section-attendees" aria-labelledby="attendees-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">수신자 제위</p>
+          <h2 id="attendees-title">참석 대상</h2>
+        </header>
+        <ul class="attendees">
+          <li class="attendee">
+            <span class="avatar" aria-hidden="true">희연</span>
+            <div>
+              <p class="attendee-name">김희연 <span>대리</span></p>
+              <p class="attendee-team">산업용품</p>
+              <p class="attendee-note">기안자. 바람이 매서워 모임을 소집함</p>
+            </div>
+          </li>
+          <li class="attendee">
+            <span class="avatar avatar--b" aria-hidden="true">설아</span>
+            <div>
+              <p class="attendee-name">염설아 <span>사원</span></p>
+              <p class="attendee-team">Cutting Tool Sales &amp; Marketing</p>
+              <p class="attendee-note">일정 조율 담당. 수목금을 콕 집어냄</p>
+            </div>
+          </li>
+          <li class="attendee">
+            <span class="avatar avatar--c" aria-hidden="true">준원</span>
+            <div>
+              <p class="attendee-name">최준원 <span>과장</span></p>
+              <p class="attendee-team">절삭공구영업팀</p>
+              <p class="attendee-note">고충사항 다수 준비 중. 16일 주간 출장(잠정)</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#leaf-maple"/></svg></div>
+
+    <!-- 후보 식당 -->
+    <section class="section" id="restaurants" aria-labelledby="restaurants-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">붙임 1</p>
+          <h2 id="restaurants-title">후보 식당</h2>
+          <p>회사(서울 중구 소공로 94)에서 걸어서 10~15분 이내,<br>셋이 조용히 고충을 나눌 수 있는 곳으로 고르고 있습니다.</p>
+        </header>
+        <p class="notice"><span aria-hidden="true">🍂</span> 현재 후보 식당을 조사 중입니다. 추가되는 대로 업데이트됩니다.</p>
+        <div class="restaurant-grid" id="restaurant-grid"></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><svg><use href="#leaf-ginkgo"/></svg></div>
+
+    <!-- 회신서 -->
+    <section class="section section-reply" id="reply" aria-labelledby="reply-title">
+      <div class="container narrow">
+        <header class="section-head">
+          <p class="eyebrow">붙임 2</p>
+          <h2 id="reply-title">회신서</h2>
+          <p>회신 마감 <strong>2026. 11. 4.(수)</strong> · 제출하시면 기안자에게 메일로 접수됩니다.</p>
+        </header>
+
+        <form class="reply-form" id="reply-form" novalidate>
+          <input type="hidden" name="access_key" value="044c6660-ad77-49aa-a8b9-b576c5645cc1">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset class="field" data-field="name">
+            <legend><span class="num">1</span>성함</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="name" value="김희연 대리"><span>김희연 대리</span></label>
+              <label class="chip"><input type="radio" name="name" value="염설아 사원"><span>염설아 사원</span></label>
+              <label class="chip"><input type="radio" name="name" value="최준원 과장"><span>최준원 과장</span></label>
+              <label class="chip"><input type="radio" name="name" value="__other"><span>기타</span></label>
+            </div>
+            <div class="other-input" data-other-for="name" hidden>
+              <label class="sr-only" for="name-other">성함 직접 입력</label>
+              <input type="text" id="name-other" name="name_other" maxlength="30" placeholder="성함과 직급을 입력해 주세요">
+            </div>
+            <p class="field-error" id="err-name" hidden></p>
+          </fieldset>
+
+          <fieldset class="field" data-field="dates">
+            <legend><span class="num">2</span>가능한 날짜 <span class="legend-hint">(모두 선택)</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="dates" value="11/11(수)"><span>11/11 <small>수</small></span></label>
+              <label class="chip"><input type="checkbox" name="dates" value="11/12(목)"><span>11/12 <small>목</small></span></label>
+              <label class="chip"><input type="checkbox" name="dates" value="11/13(금)"><span>11/13 <small>금</small></span></label>
+              <button type="button" class="chip-btn" id="all-dates">모두 가능</button>
+            </div>
+            <p class="field-error" id="err-dates" hidden></p>
+          </fieldset>
+
+          <fieldset class="field" data-field="best">
+            <legend><span class="num">3</span>가장 희망하는 날짜 <span class="legend-hint">(선택)</span></legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="best_date" value="상관없음" checked><span>상관없음</span></label>
+              <label class="chip"><input type="radio" name="best_date" value="11/11(수)" disabled><span>11/11 <small>수</small></span></label>
+              <label class="chip"><input type="radio" name="best_date" value="11/12(목)" disabled><span>11/12 <small>목</small></span></label>
+              <label class="chip"><input type="radio" name="best_date" value="11/13(금)" disabled><span>11/13 <small>금</small></span></label>
+            </div>
+            <p class="field-help">2번에서 고른 날짜 중에서 선택할 수 있습니다.</p>
+          </fieldset>
+
+          <fieldset class="field" data-field="restaurant">
+            <legend><span class="num">4</span>희망 식당</legend>
+            <div class="chips" id="restaurant-options"></div>
+            <div class="other-input" data-other-for="restaurant" hidden>
+              <label class="sr-only" for="restaurant-other">추천 식당 직접 입력</label>
+              <input type="text" id="restaurant-other" name="restaurant_other" maxlength="60" placeholder="추천하고 싶은 식당 이름이나 메뉴">
+            </div>
+            <p class="field-error" id="err-restaurant" hidden></p>
+          </fieldset>
+
+          <div class="field">
+            <label class="field-label" for="grievance"><span class="num">5</span>미리 보는 고충 한 줄 <span class="legend-hint">(선택)</span></label>
+            <textarea id="grievance" name="grievance" rows="2" maxlength="200" placeholder="예) 메일함은 열었다 닫았다 하는데 일은 줄지 않습니다"></textarea>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="message"><span class="num">6</span>하고 싶은 말 <span class="legend-hint">(선택)</span></label>
+            <textarea id="message" name="message" rows="3" maxlength="500" placeholder="못 먹는 음식, 늦게 합류 등 참고할 내용"></textarea>
+          </div>
+
+          <div class="form-foot">
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+              <span class="btn-label">회신 제출 (결재 올리기)</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="reply-done" id="reply-done" tabindex="-1" hidden>
+          <span class="done-stamp" aria-hidden="true">접 수</span>
+          <h3>회신 감사드립니다 <span aria-hidden="true">🍁</span></h3>
+          <dl class="done-summary" id="done-summary"></dl>
+          <p class="done-sign" id="done-sign"></p>
+          <button type="button" class="btn btn-ghost" id="reply-again">다시 작성하기</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>기안 : 산업용품 김희연 대리 · 회신 마감 2026. 11. 4.(수)</p>
+      <p class="muted">“흔들리는 것은 바람도 아니고 깃발도 아니며, 그대들의 마음이다”</p>
+    </div>
+  </footer>
+
+  <script src="restaurants.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
