@@ -183,8 +183,8 @@
     const hasMap = /^https:\/\//.test(r.naverUrl || '');
     const mapUrl = hasMap
       ? r.naverUrl
-      : `https://map.naver.com/p/search/${encodeURIComponent(`소공동 ${r.category || '맛집'}`)}`;
-    const mapLabel = hasMap ? '네이버 지도에서 보기' : `근처 ${r.category || '맛집'} 둘러보기`;
+      : `https://map.naver.com/p/search/${encodeURIComponent(r.mapQuery || r.name)}`;
+    const mapLabel = hasMap ? '네이버 지도에서 보기' : '네이버 지도에서 찾기';
     const photo = r.photo
       ? `<img src="${esc(r.photo)}" alt="${esc(r.name)} 대표 사진" loading="lazy">`
       : '<svg class="r-photo-leaf" viewBox="0 0 24 24" aria-hidden="true"><use href="#leaf-maple"/></svg><span class="r-photo-text">사진 준비 중</span>';
