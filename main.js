@@ -37,7 +37,8 @@
     let left = false;
 
     document.body.classList.add('intro-lock');
-    cover.focus({ preventScroll: true });
+    intro.tabIndex = -1;
+    intro.focus({ preventScroll: true });
 
     cover.addEventListener('click', open);
     enter.addEventListener('click', leave);
@@ -126,6 +127,7 @@
       if (candidates.includes(d)) cls.push('is-candidate');
       else if (blocked.includes(d)) cls.push('is-blocked');
       if (trip.includes(d)) cls.push('is-trip');
+      if (![3, 4, 5].includes(dow)) cls.push('is-off'); // 수·목·금 외 요일은 대상 외
       if (dow === 0) cls.push('is-sun');
       if (dow === 6) cls.push('is-sat');
       html += `<span class="${cls.join(' ')}" aria-hidden="true">${d}</span>`;
@@ -138,8 +140,8 @@
     const box = $('.hero-leaves');
     if (!box || reduceMotion) return;
     const shapes = ['leaf-maple', 'leaf-ginkgo', 'leaf-oval'];
-    const colors = ['#E07A3F', '#E8B04B', '#9C3D2E', '#D9893A', '#C4612A'];
-    const count = window.innerWidth < 640 ? 8 : 14;
+    const colors = ['#B4532F', '#C99A3B', '#8E3B26', '#B7773A'];
+    const count = window.innerWidth < 640 ? 5 : 9;
     for (let i = 0; i < count; i++) {
       const leaf = document.createElement('span');
       const size = 14 + Math.random() * 18;
@@ -148,7 +150,7 @@
         `left:${Math.random() * 100}%`,
         `width:${size}px`, `height:${size}px`,
         `color:${pick(colors)}`,
-        `animation-duration:${10 + Math.random() * 10}s`,
+        `animation-duration:${16 + Math.random() * 12}s`,
         `animation-delay:${-Math.random() * 20}s`,
         `--drift:${Math.round((Math.random() * 2 - 1) * 140)}px`,
         `--spin:${Math.round((Math.random() * 2 - 1) * 540)}deg`,
@@ -169,7 +171,7 @@
     grid.innerHTML = restaurants.map(cardHtml).join('');
   }
 
-  function cardHtml(r) {
+  function cardHtml(r, i) {
     const pending = r.status !== 'ready';
     const tbd = '<span class="tbd">조사 중…</span>';
     const location = r.address
@@ -189,9 +191,8 @@
 
     return `
       <article class="r-card${pending ? ' is-pending' : ''}">
-        <span class="r-tab">${esc(r.category || '기타')}</span>
-        <div class="r-sheet">
-          ${pending ? '<span class="r-stamp">검토중</span>' : ''}
+        <div class="r-top"><span>붙임 1-${String.fromCharCode(65 + i)}</span><span class="r-tab">${esc(r.category || '기타')}</span></div>
+        ${pending ? '<span class="r-stamp">검토 중</span>' : ''}
           <div class="r-photo">${photo}</div>
           <h3 class="r-name">${esc(r.name)}</h3>
           ${r.description ? `<p class="r-desc">${esc(r.description)}</p>` : ''}
@@ -204,7 +205,6 @@
           <a class="btn btn-map" href="${esc(mapUrl)}" target="_blank" rel="noopener">
             ${esc(mapLabel)} <span aria-hidden="true">↗</span><span class="sr-only">(새 창)</span>
           </a>
-        </div>
       </article>`;
   }
 
@@ -288,7 +288,7 @@
 
       submitBtn.disabled = true;
       submitBtn.classList.add('is-loading');
-      status.textContent = '결재 올리는 중…';
+      status.textContent = '제출하는 중…';
       try {
         const res = await fetch(WEB3FORMS_ENDPOINT, {
           method: 'POST',
@@ -317,11 +317,9 @@
 
     function collect() {
       const val = (name) => (form.querySelector(`input[name="${name}"]:checked`) || {}).value || '';
-      const nameChoice = val('name');
       const restChoice = val('restaurant');
       return {
-        nameChoice,
-        name: nameChoice === '__other' ? form.elements.name_other.value.trim() : nameChoice,
+        name: val('name'),
         dates: dateBoxes.filter((b) => b.checked).map((b) => b.value),
         bestDate: val('best_date') || '상관없음',
         restaurantChoice: restChoice,
@@ -333,8 +331,7 @@
 
     function validate(d) {
       const errors = {};
-      if (!d.nameChoice) errors.name = '성함을 선택해 주세요.';
-      else if (!d.name) errors.name = '성함을 입력해 주세요.';
+      if (!d.name) errors.name = '성함을 선택해 주세요.';
       if (!d.dates.length) errors.dates = '가능한 날짜를 하나 이상 선택해 주세요.';
       if (!d.restaurantChoice) errors.restaurant = '희망 식당을 선택해 주세요.';
       else if (!d.restaurant) errors.restaurant = '추천 식당을 입력해 주세요.';
