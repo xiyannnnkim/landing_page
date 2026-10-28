@@ -188,12 +188,19 @@
     const photo = r.photo
       ? `<img src="${esc(r.photo)}" alt="${esc(r.name)} 대표 사진" loading="lazy">`
       : '<svg class="r-photo-leaf" viewBox="0 0 24 24" aria-hidden="true"><use href="#leaf-maple"/></svg><span class="r-photo-text">사진 준비 중</span>';
+    const src = r.photo && r.photoSource;
+    const credit = src && src.label
+      ? `<p class="r-credit">사진 출처: ${/^https:\/\//.test(src.url || '')
+        ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.label)}<span class="sr-only">(새 창)</span></a>`
+        : esc(src.label)}</p>`
+      : '';
 
     return `
       <article class="r-card${pending ? ' is-pending' : ''}">
         <div class="r-top"><span>붙임 1-${String.fromCharCode(65 + i)}</span><span class="r-tab">${esc(r.category || '기타')}</span></div>
         ${pending ? '<span class="r-stamp">검토 중</span>' : ''}
           <div class="r-photo">${photo}</div>
+          ${credit}
           <h3 class="r-name">${esc(r.name)}</h3>
           ${r.description ? `<p class="r-desc">${esc(r.description)}</p>` : ''}
           <dl class="r-info">
